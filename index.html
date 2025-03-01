@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/style.css" rel="stylesheet" crossorigin="anonymous">
+  <title>Mazuttier | Inicio</title>
+  <link rel="icon" href="img/image.png">  
+</head>
+<body>
+  <header class="header">
+    <div class="schedule-section">
+      <h5 style="text-align: center;">Horarios: L: 7 A.M - 6:00 P.M | M - V: 8 A.M - 6:00 P.M</h1>
+    </div>
+    <div class="nav-container">
+      <div class="logo">Mazuttier<span>Beauty School</span></div>
+      <!-- Botón de menú hamburguesa -->
+      <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Menú de navegación -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="cta-button"> <a href="#contacto" style="text-decoration: none; color: black;">INSCRÍBETE AHORA</a></button>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/car_1.jpeg" alt="Imagen 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/car_2.jpeg" alt="Imagen 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/car_3.jpeg" alt="Imagen 3" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1>Transforma tu pasión en una <span>carrera exitosa</span></h1>
+      <p>En Mazuttier Beauty School te formamos como profesional con las técnicas más avanzadas y tendencias actuales del mundo de la belleza.</p>
+      <button class="cta-button"> <a href="#cursos" style="text-decoration: none; color: black;">CONOCE NUESTROS PROGRAMAS</a></button>
+    </div>
+  </section>
+
+  <section class="section courses" id="cursos">
+    <h2 class="section-title">Nuestros Cursos</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <div class="course-image">
+          <img src="/api/placeholder/300/200" alt="Curso de Estilismo" />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Curso Profesional Cuidado Estético en Manos y Pies</h3>
+          <p class="course-description">
+
+            <ul style="margin-left: 5%; margin-bottom: 3%;">              
+              <li><strong>Modalidad:</strong> Presencial</li>      
+              <li><strong>Duración:</strong> 6 meses</li>
+              <li><strong>Incluye:</strong> Bioseguridad, manicura y pedicura tradicional, +30 técnicas avanzadas de decoración</li>
+              <li><strong>Técnicas:</strong> Acrílico, poly gel, esmalte semipermanente, softgel, press on</li>                       
+            </ul>          
+            Ideal para emprender, trabajar en el extranjero o especializarte en estética. <br>            
+            <strong>¡Inscríbete y comienza tu viaje en el mundo de la belleza!</strong>
+            <br>
+          </p>
+          <button class="cta-button"><a href="#contacto" style="text-decoration: none; color: rgb(24, 24, 24);">Inscribirse</a></button>
+        </div>
+      </div>
+      
+      <div class="course-card">
+        <div class="course-image">
+          <img src="/api/placeholder/300/200" alt="Curso de Maquillaje" />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Curso Maquillaje Profesional</h3>
+          <p class="course-description">Domina el arte del maquillaje social, editorial y para eventos especiales con productos de alta gama.</p>
+          <button class="cta-button">Ver Detalles</button>
+        </div>
+      </div>           
+  </section>
+
+  <section class="section about" id="nosotros">
+    <div class="about-image">
+      <img src="/api/placeholder/500/400" alt="Nuestra escuela" />
+    </div>
+    <div class="about-content">
+      <h2 class="about-title">Sobre Nosotros</h2>
+      <p>Academia de Belleza Elegance lleva más de 15 años formando a los mejores profesionales del sector. Contamos con instalaciones de última generación y un equipo docente compuesto por expertos reconocidos en la industria.</p>
+      <p>Nuestro método educativo combina teoría y práctica intensiva, asegurando que nuestros graduados estén preparados para destacar desde el primer día.</p>
+      <button class="cta-button">CONOCE NUESTRA HISTORIA</button>
+    </div>
+  </section>
+
+  <section class="section testimonials" id="testimonios">
+    <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">
+        <p class="testimonial-text">"Estudiar en Mazuttier cambió mi vida. Ahora tengo mi propio salón y trabajo con clientes que realmente valoran mi talento y profesionalismo."</p>
+        <p class="testimonial-author">María García, Graduada 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contacto">
+    <h2 class="section-title">Contáctanos</h2>
+    <div class="contact-form">
+      <!-- Reemplaza "tucorreo@ejemplo.com" con tu correo real -->
+      <form action="https://formspree.io/f/mkgodrwo" method="POST">
+        <div class="form-group">
+          <input type="text" name="Nombre" class="form-input" placeholder="Nombre completo" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="Email" class="form-input" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="Teléfono" class="form-input" placeholder="Teléfono" required>
+        </div>
+        <div class="form-group">
+          <select name="Curso de interés" class="form-input" required>
+            <option value="" disabled selected>Curso de interés</option>
+            <option value="Estilismo Profesional">Estilismo Profesional</option>
+            <option value="Maquillaje Profesional">Maquillaje Profesional</option>
+            <option value="Manicura y Nail Art">Manicura y Nail Art</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea name="mensaje" class="form-input" placeholder="Mensaje"></textarea>
+        </div>                
+        <input type="submit" class="submit-button" value="ENVIAR CONSULTA">
+      </form>
+    </div>
+</section>
+
+  <footer class="footer">
+    <div class="logo">Mazuttier <span>Beauty School</span></div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/p/Mazuttier-100064082199825/">Facebook</a>
+      <a href="https://www.instagram.com/mazuttier_school/?hl=es">Instagram</a>      
+      <a href="https://www.tiktok.com/@mazuttiermazuttier">TikTok</a>
+    </div>
+    <p> Cl. 11 a # 17 C - 20 Piso 2, Barrio El Sol. Funza Cundinamarca | Tel: +57 313 815 4777 | <a href="mailto:mazuttierschool@gmail.com">mazuttierschool@gmail.com</a></p>
+    <p class="copyright">© 2025 Academia de Mazuttier. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <div class="whatsapp-button">
+    <a href="https://wa.me/573138154777" target="_blank">
+      <img src="img/whatsapp.png" alt="WhatsApp" />
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const carouselItems = document.querySelectorAll(".carousel-item");
+      let currentIndex = 0;
+
+      function showNextImage() {
+        // Oculta la imagen actual
+        carouselItems[currentIndex].classList.remove("active");
+
+        // Avanza al siguiente índice
+        currentIndex = (currentIndex + 1) % carouselItems.length;
+
+        // Muestra la siguiente imagen
+        carouselItems[currentIndex].classList.add("active");
+      }
+
+      // Cambia la imagen cada 5 segundos
+      setInterval(showNextImage, 2000);
+    });
+
+    // Script para el menú hamburguesa
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      // Alternar el menú al hacer clic en el botón
+      mobileMenuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+
+      // Cerrar el menú al hacer clic en un enlace
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("active");
+        });
+      });
+    });
+    
+  </script>
+</body>
+</html>
