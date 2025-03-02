@@ -258,6 +258,17 @@ body {
   object-position: center;
 }
 
+.about-image img{
+  flex: 1;
+  height: 400px;
+  width: 500px;
+  background-color: #333;
+  border-radius: 10px;
+  border: 3px solid #D4AF37;
+  object-fit: cover;
+  object-position: center;
+}
+	
 .about-content {
   flex: 1;
 }
