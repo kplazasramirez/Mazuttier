@@ -32,24 +32,20 @@
     </div>
   </header>
 
+  <<!-- Sección del carrusel -->
   <section class="hero" id="inicio">
     <div class="hero-carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/car_1.jpeg" alt="Imagen 1" />
-        </div>
-        <div class="carousel-item">
-          <img src="img/car_2.jpeg" alt="Imagen 2" />
-        </div>
-        <div class="carousel-item">
-          <img src="img/car_3.jpeg" alt="Imagen 3" />
-        </div>
+      <div class="carousel-inner" id="carousel-inner">
+        <!-- Las imágenes se cargarán dinámicamente aquí -->
       </div>
     </div>
+    <!-- Contenido del carrusel (texto y botón) -->
     <div class="hero-content">
       <h1>Transforma tu pasión en una <span>carrera exitosa</span></h1>
       <p>En Mazuttier Beauty School te formamos como profesional con las técnicas más avanzadas y tendencias actuales del mundo de la belleza.</p>
-      <button class="cta-button"> <a href="#cursos" style="text-decoration: none; color: black;">CONOCE NUESTROS PROGRAMAS</a></button>
+      <button class="cta-button">
+        <a href="#cursos" style="text-decoration: none; color: black;">CONOCE NUESTROS PROGRAMAS</a>
+      </button>
     </div>
   </section>
 
@@ -196,8 +192,43 @@
           navLinks.classList.remove("active");
         });
       });
-    });
+    });        
+    const imagesJsonUrl = 'https://kplazasramirez.github.io/Mazuttier/imagenes.json';
     
+    async function loadCarouselImages() {
+      try {
+        // Obtener la lista de imágenes desde el archivo JSON
+        const response = await fetch(imagesJsonUrl);
+        const images = await response.json();
+
+        const carouselInner = document.getElementById('carousel-inner');
+
+        // Crear los elementos de las imágenes dinámicamente
+        carouselInner.innerHTML = images.map((img, index) => `
+          <div class="carousel-item ${index === 0 ? 'active' : ''}">
+            <img src="https://kplazasramirez.github.io/Mazuttier/imagenes/${img}" alt="Imagen ${index + 1}" />
+          </div>
+        `).join('');
+        
+        startCarousel();
+      } catch (error) {
+        console.error('Error al cargar las imágenes:', error);
+      }
+    }
+    
+    let currentIndex = 0;
+    function startCarousel() {
+      const carouselItems = document.querySelectorAll(".carousel-item");
+
+      setInterval(() => {
+        carouselItems[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % carouselItems.length;
+        carouselItems[currentIndex].classList.add("active");
+      }, 5000); // Cambiar imagen cada 5 segundos
+    }
+
+    // Cargar imágenes al cargar la página
+    window.onload = loadCarouselImages;
   </script>
 </body>
 </html>
