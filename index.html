@@ -158,23 +158,8 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const carouselItems = document.querySelectorAll(".carousel-item");
-      let currentIndex = 0;
-
-      function showNextImage() {
-        // Oculta la imagen actual
-        carouselItems[currentIndex].classList.remove("active");
-
-        // Avanza al siguiente índice
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-
-        // Muestra la siguiente imagen
-        carouselItems[currentIndex].classList.add("active");
-      }
-
-      // Cambia la imagen cada 5 segundos
-      setInterval(showNextImage, 2000);
-    });
+      const carouselItems = document.querySelectorAll(".carousel-item");      
+      
 
     // Script para el menú hamburguesa
     document.addEventListener("DOMContentLoaded", function () {
@@ -224,7 +209,7 @@
         carouselItems[currentIndex].classList.remove("active");
         currentIndex = (currentIndex + 1) % carouselItems.length;
         carouselItems[currentIndex].classList.add("active");
-      }, 5000); // Cambiar imagen cada 5 segundos
+      }, 2000); // Cambiar imagen cada 5 segundos
     }
 
     // Cargar imágenes al cargar la página
